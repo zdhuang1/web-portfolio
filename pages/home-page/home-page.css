@@ -11,14 +11,10 @@ body {
     flex-direction: row;
     padding-top: 20px;
     font-family: "Lato";
-    font-size: 20px;
+    font-size: 32px;
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
-    color: black;
     justify-content: right;
-    padding-right: 5%;
-    
 }
 
 .nav-link {
@@ -66,41 +62,20 @@ body {
   /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
-.home-title{
+.title{
     display: flex;
-    justify-content: center;
-    text-align: center;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    padding-right: 22%;
-
-    font-size: 50px;
-    font-weight: bolder;
-}
-
-#title{
-    margin:0;
-}
-
-.home-header {
-    display:flex;
     flex-direction: row;
-    width: 50%;
-    height: 50vh
-}
+    padding: 5% 0% 0% 5%;
 
-.home-desc{
-    width: 60%;
-    margin: auto;
-
-    color: #030303;
-    font-family: "Lato";
-    font-size: 20px; 
+    font-size: 38px;
+    font-weight: bold;
+    font-style: normal;
     line-height: normal;
 }
 
 /* Adding amorphous movement to profile picture */
 .container {
+    padding: 5% 0 0 0;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -176,8 +151,63 @@ body {
     }
   }
   
+/* Home page about me description */
+.home-desc{
+  padding-top: 15%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+}
+
+.home-desc-column{
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+
+.home-desc-header{
+  font-family: "Lato";
+  color: black;
+  font-size: 32px;
+  font-weight: bold;
+
+  font-style: normal;
+  line-height: normal;
+    
+}
+
+.home-desc-text{
+  color: #030303;
+  font-family: "Lato";
+  font-size: 18px; 
+  font-weight: normal; 
+  
+  font-style: normal;
+  line-height: normal;
+}
+
+.trapezoid{
+  border-bottom: 80px solid #97ACFA;
+  border-left: 100px solid transparent;
+
+  justify-content: right;
+}
+
+.corner-trapezoid {
+position: fixed;
+bottom: 0;
+right: 0;
+width: 100vw;
+height: 100vh;
+background: rgba(151, 172, 250, 1); /* change color/opacity as desired */
+clip-path: polygon(0 100%, 100% 100%, 100% 33%);
+pointer-events: none; /* allows clicks through the shape */
+z-index: 0; /* keep behind page content */
+}
 
 
+/* My projects */
 .project-grid {
     display: flex;
     flex-direction: column;
