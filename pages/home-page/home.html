@@ -10,60 +10,96 @@
   <link rel="stylesheet" type="text/css" href="home-page.css" />
 </head>
 
-  <div class="nav-bar">
-    <div class="nav-link btn-holder">
-      <a href="../home-page/home.html">
-        <button class="btn btn-1 hover-filled-opacity"> 
-          <span>About</span>
-        </button>
-      </a>
-    </div>
-    <div class = "nav-link btn-holder">
-      <a href="../resume-page/resume.html">
-        <button class="btn btn-1 hover-filled-opacity">
-          <span>Resume</span>
-        </button>
-      </a>
-    </div>
-    <div class="nav-link btn-holder dropdown">
-        <a href="#"><button class="btn btn-1 hover-filled-opacity"><span>Projects</span></button></a>
-      <div class="dropdown-content">
-        <a href="../28-percent-example-page/28percent-example.html">28 Percent Website Example</a>
-        <a href="/project-template.html">Project Template</a>
+<body>
+
+  <!-- Nav Bar -->
+  <header class="site-header">
+    <div class="nav-bar">
+      <div class="nav-link btn-holder">
+        <a href="../home-page/home.html">
+          <button class="btn btn-1 hover-filled-opacity"> 
+            <span>About</span>
+          </button>
+        </a>
       </div>
-    </div>
-  </div>
-
-  <div class="corner-trapezoid" aria-hidden="true"></div>
-
-  <div class="container"> 
-    <div class="title1">
-      <p>Hello, my name is...</p>
-    </div>
-    <div class="title2">
-      Zachary Huang
-    </div>
-
-    <div class="box">
-      <div class="spin-container">
-        <div class="shape">
-          <div class="bd">
-          </div>
+      <div class = "nav-link btn-holder">
+        <a href="../resume-page/resume.html">
+          <button class="btn btn-1 hover-filled-opacity">
+            <span>Resume</span>
+          </button>
+        </a>
+      </div>
+      <div class="nav-link btn-holder dropdown">
+          <a href="#"><button class="btn btn-1 hover-filled-opacity"><span>Projects</span></button></a>
+        <div class="dropdown-content">
+          <a href="../28-percent-example-page/28percent-example.html">28 Percent Website Example</a>
+          <a href="/project-template.html">Project Template</a>
         </div>
       </div>
     </div>
-  </div>
+  </header>
+  
 
+  <!-- Section 1 -->
+  <section class="section section--hero">
+    <!-- Background -->
+    <div class="corner-trapezoid" aria-hidden="true"></div>
 
-  <div class="home-desc">
-    <div class="home-desc-column">
-      <div class="home-desc">
-        <p>I’ve always loved solving problems, and over time I’ve developed a deep appreciation for art. By combining computer science and design, I get to tackle problems in creative, expressive ways. I’m fascinated by how people interact with the world, and I love designing experiences that make those interactions positive and meaningful.
-        <p>I’m mainly interested in event planning, education, sustainability, and UI/UX web design, and human-centered design is at the core of everything I do. I enjoy collaborating with others, learning from different perspectives, and growing as a designer—both through creating and connecting with the design community.</p>
-        <p>Take a look at some of my projects or just say hi! - zadahu@gmail.com</p>
+    <div class="content">
+      <!-- Titles -->
+      <div class="title1">
+        <p>Hello, my name is...</p>
       </div>
+      <div class="title2">
+        Zachary Huang
+      </div>
+
+      <!-- Profile Picture -->
+      <div class="container"> 
+        <div class="box">
+          <div class="spin-container">
+            <div class="shape">
+              <div class="bd">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section class="section section--match">
+
+    <!-- About Me-->
+    <div class="home-desc">
+      <header class="home-desc-header">
+        <div class="home-desc-h1">
+          <p>About Me</p>
+        </div>
+        <div class="home-desc-h2">
+          <p>--Who Am I--</p>
+        </div>
+      </header>
+      <!-- Content -->
+      <main class="home-desc-content">
+        <div class="home-desc-column">
+          <p>I am Zachary Huang. I am a 20 year-old computer science and design student studying at UC San Diego. I am passionate about web design and development, looking to pursue a career in UI/UX web development. I'm also interested in event planning, education, and sustainability, with human-centered design at the core of everything I do.</p>
+        </div>
+        <div class="home-desc-column">
+          <p> I'm fascinated by how people interact with the world, and I love designing experiences that make those interactions positive and meaningful. I enjoy collaborating with others, learning from different perspectives, and growing as a designer through creating and connecting with the design community.</p>
+        </div>
+        <div class="home-desc-column">
+          <p>I've always been drawn to problem-solving, and over time I have grown to appreciate art just as deeply. Bringing computer science and design together allows me to tackle challenges in creative and expressive ways, creating a intersection that perfectly reflects what I love to do. </p>
+        </div>
+      </main>
+      <footer class="home-desc-footer">
+        <a href="mailto:zadahu@gmail.com">zadahu@gmail.com</a>
+      </footer>
+    </div>
+
+  </section>
 
 <!--
   <div class="project-grid">
@@ -128,8 +164,7 @@
         </div>
       </div>
     -->
-    <br /><br /><br />
-  
-  </div>
-
+    </div>
+  <script src="home.js"></script>
+  </body>
 </html>

@@ -1,12 +1,72 @@
+/* VARIABLES (easy color syncing) */
+:root {
+  --trapezoid-color: rgba(151, 172, 250, 1);
+  --background-color: rgb(236, 238, 241);
+}
 
 * {
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 body {
-  background: #eceef1;
+  font-family: system-ui, sans-serif;
+  background: transparent;
+  min-height: 100%;
+  line-height: 1.6;
   display: block;
-  margin: 0px;
+
 }
+
+.site-header {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Section 1 */
+.section--hero {
+  background: var(--background-color);
+  overflow: hidden;
+}
+
+/* Trapezoid */
+.corner-trapezoid {
+  position: absolute;
+  inset: 0;
+  background: var(--trapezoid-color);
+  clip-path: polygon(
+    0 100%,   /* bottom-left */
+    100% 100%, /* bottom-right */
+    100% 45%   /* midway up right side */
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Section 2 */
+.section--match {
+  background: var(--trapezoid-color);
+}
+
 
 .nav-bar {
   display: flex;
@@ -104,28 +164,26 @@ body {
 .title1{
   position: absolute;
   transform: translate(-50%, -50%)
-             translate(-8rem, -15vh);
+             translate(0rem, 8rem);
   color: rgb(50, 50, 50);
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 76px;
+  font-size: 80px;
   z-index: 9999;
 }
 
 .title2{
   position: absolute;
   transform: translate(-50%, -50%)
-             translate(35rem, -15vh);
+             translate(43rem, 13rem);
   color: rgb(50, 50, 50);
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 76px;
+  font-size: 80px;
   z-index: 9999;
 }
-
-
 
 /* Adding amorphous movement to profile picture */
 .container {
@@ -207,51 +265,64 @@ body {
   
 /* Home page about me description */
 .home-desc{
-  margin: 20px auto 2px;
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: row;
-}
-
-.home-desc-column{
   display: flex;
   flex-direction: column;
-  width: auto;
+  min-height: 100vh;
 }
-
-.home-desc-header{
-  font-family: "Lato";
-  color: black;
-  font-size: 32px;
+.home-desc-header{  
+  padding: 20px;
+  text-align: center;
+}
+.home-desc-h1{
+  font-family: "Oswald", sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 64px;
   font-weight: bold;
-
   font-style: normal;
-  line-height: normal;
-    
 }
-
-.home-desc-text{
-  color: #030303;
-  font-family: "Lato";
-  font-size: 18px; 
-  font-weight: normal; 
-  
+.home-desc-h2{
+  font-family: "Oswald", sans-serif;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
   font-style: normal;
-  line-height: normal;
+  margin-top: -12px;
+}
+.home-desc-content{
+  display: flex;
+  flex: 1;
+  padding: 0px 20px 0px 20px;
+  gap: 30px;
+
+  font-family: "Oswald", sans-serif;
+  font-size: 24px; 
+  font-weight: 300; 
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: 1px;
+}
+@media (max-width: 768px) {
+    .home-desc-content {
+        flex-direction: column;
+    }
+}
+.home-desc-column{
+  padding: 20px;
+  flex: 1;
+  border-radius: 4px;
+}
+.home-desc-footer {
+  text-align: center;
+}
+.home-desc-footer a {
+  font-family: "Oswald", sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 16px;;
+  font-weight: 300;
+  font-style: normal;
 }
 
-.corner-trapezoid {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(151, 172, 250, 1); /* change color/opacity as desired */
-  clip-path: polygon(0 100%, 100% 100%, 100% 33%);
-  pointer-events: none; /* allows clicks through the shape */
-  z-index: 0; /* keep behind page content */
-}
+
 
 /* My projects */
 .project-grid {
@@ -275,7 +346,6 @@ body {
 }
 
 .project-inner-container {
-
     width: 494px;
     height: 300px;
     display:flex;
