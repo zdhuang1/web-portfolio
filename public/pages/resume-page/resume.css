@@ -1,0 +1,154 @@
+:root {
+	/* Responsive Sizing */
+	--size: 25vmin;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: rgb(245, 244, 245);
+  min-height: 100%;
+  line-height: 1.6;
+  display: block;
+}
+
+/* Fix pf1 centering */
+#pf1 {
+	margin: 0 auto 1rem !important;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.5);
+  margin-top: 8rem !important;
+}
+
+
+/* Nav bar */
+.site-header {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+}
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin: 1rem 0.5rem 2rem;
+}
+
+/*-- nav buttons --*/
+.btn {
+  position: relative;
+  display: inline-block;
+  width: auto; height: auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0px 25px 15px;
+  min-width: 150px;
+}
+  .btn span {         
+    position: relative;
+    display: inline-block;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    top: 0; left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    transition: 0.3s;
+    color: rgb(0, 0, 0);
+    border: 3px solid rgb(28, 31, 30);
+    transition: 0.2s 0.1s;
+  }
+.btn::before {
+  background-color: rgb(32, 36, 34);
+  transition: 0.3s ease-out;
+  top:0; bottom: 0; right: 0;
+  height: 100%; width: 100%;
+  opacity: 1;
+}
+.btn span:hover {
+  color: #9EBCEF;
+  transition: 0.2s 0.1s;
+}
+.btn:hover::before {
+  opacity: 0;
+}
+
+/*-- Dropdown --*/
+.dropdown {
+  position: relative; 
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.dropdown:hover .dropdown-content{
+  opacity:1;
+  transition: 0.2s 0.1s;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border: none;
+    opacity: 0;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    display: block;
+    font-weight: 400;
+    line-height: normal;
+    color: rgb(0, 0, 0);
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    transition: 0.2s 0.1s;
+}
+.dropdown-content a:hover {
+  background-color: #ffffff;
+  color: #9EBCEF;
+}
+
+  /* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+.corner-trapezoid {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(151, 172, 250, 1); /* change color/opacity as desired */
+  clip-path: polygon(0 100%, 100% 100%, 100% 33%);
+  pointer-events: none; /* allows clicks through the shape */
+  z-index: 0; /* keep behind page content */
+}
+
+/* Print Styles */
+@media print {
+	/* Hide everything that doesn't have the '.print' class */
+	body > *:not(.print) {
+		display: none;
+	}
+
+	.front {
+		/* Force the browser to print with the given colors */
+		color-adjust: exact;
+		-webkit-print-color-adjust: exact;
+		background-color: #071c33;
+		color: #fff;
+	}
+}
+
