@@ -98,6 +98,7 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
+    width: 100%;
     border: none;
     opacity: 0;
 }
@@ -257,6 +258,8 @@ body {
     font-weight: 300;
     letter-spacing: 1px;
     line-height: normal;
+
+    
   }
   
   .three-grid {
